@@ -5,7 +5,6 @@ export interface IUser extends Document {
     lastName: string,
     email: string,
     password: string,
-    avatar: string,
     refreshToken: string,
     isArchived: boolean,
 }
@@ -32,11 +31,6 @@ const userSchema: Schema<IUser> = new Schema({
     },
     refreshToken: {
         type: String,
-    },
-    avatar: {
-        type: String,
-        required: true,
-        default: ""
     },
     isArchived: {
         type: Boolean,
